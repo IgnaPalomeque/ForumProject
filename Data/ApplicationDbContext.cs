@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using ForumProject.Models;
 
 namespace ForumProject.Data
 {
@@ -9,5 +10,6 @@ namespace ForumProject.Data
             : base(options)
         {
         }
+        public DbSet<ForumProject.Models.ForumPost> ForumPost { get; set; } = default!;
     }
 }
