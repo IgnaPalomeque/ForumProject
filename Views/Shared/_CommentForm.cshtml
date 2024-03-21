@@ -1,0 +1,14 @@
+﻿@model ForumProject.Models.PostComment
+
+@using (Html.BeginForm("CreateComment", "Posts"))
+{
+	@Html.HiddenFor(model => model.PostID)
+
+	<div class="form-group">
+		<label>Add a comment</label>
+		<textarea asp-for="Body" class="form-control"></textarea>
+		<span asp-validation-for="Body" class="text-danger"></span>
+		<br />
+		<button type="submit">Comment</button>	
+	</div>
+}

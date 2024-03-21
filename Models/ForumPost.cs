@@ -7,10 +7,13 @@ namespace ForumProject.Models
         [Key]
         public int ID { get; set; }
         [Required]
-        public string Title { get; set; }
-        public string Description { get; set; }
+        public string? Title { get; set; }
         [Required]
-        public string Creator { get; set; }
-        public DateTime TimeCreated{ get; set; } = DateTime.Now;
+        public string? Description { get; set; }
+        [Required]
+        public string? Author { get; set; }
+        [Required]
+        public DateTime DateCreated { get; set; } = DateTime.Now;
+        public ICollection<PostComment>? Comments { get; set; }
     }
 }

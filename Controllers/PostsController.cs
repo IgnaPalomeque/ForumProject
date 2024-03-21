@@ -10,22 +10,22 @@ using ForumProject.Models;
 
 namespace ForumProject.Controllers
 {
-    public class ForumPostsController : Controller
+    public class PostsController : Controller
     {
         private readonly ApplicationDbContext _context;
 
-        public ForumPostsController(ApplicationDbContext context)
+        public PostsController(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        // GET: ForumPosts
+        // GET: Posts
         public async Task<IActionResult> Index()
         {
             return View(await _context.ForumPost.ToListAsync());
         }
 
-        // GET: ForumPosts/Details/5
+        // GET: Posts/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -34,6 +34,7 @@ namespace ForumProject.Controllers
             }
 
             var forumPost = await _context.ForumPost
+                .Include(e => e.Comments)
                 .FirstOrDefaultAsync(m => m.ID == id);
             if (forumPost == null)
             {
@@ -43,18 +44,18 @@ namespace ForumProject.Controllers
             return View(forumPost);
         }
 
-        // GET: ForumPosts/Create
+        // GET: Posts/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: ForumPosts/Create
+        // POST: Posts/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Title,Description,Creator,TimeCreated")] ForumPost forumPost)
+        public async Task<IActionResult> Create([Bind("ID,Title,Description,Author,DateCreated")] ForumPost forumPost)
         {
             if (ModelState.IsValid)
             {
@@ -65,7 +66,7 @@ namespace ForumProject.Controllers
             return View(forumPost);
         }
 
-        // GET: ForumPosts/Edit/5
+        // GET: Posts/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -81,12 +82,12 @@ namespace ForumProject.Controllers
             return View(forumPost);
         }
 
-        // POST: ForumPosts/Edit/5
+        // POST: Posts/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Title,Description,Creator,TimeCreated")] ForumPost forumPost)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Title,Description,Author,DateCreated")] ForumPost forumPost)
         {
             if (id != forumPost.ID)
             {
@@ -116,7 +117,7 @@ namespace ForumProject.Controllers
             return View(forumPost);
         }
 
-        // GET: ForumPosts/Delete/5
+        // GET: Posts/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -134,7 +135,7 @@ namespace ForumProject.Controllers
             return View(forumPost);
         }
 
-        // POST: ForumPosts/Delete/5
+        // POST: Posts/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -153,5 +154,28 @@ namespace ForumProject.Controllers
         {
             return _context.ForumPost.Any(e => e.ID == id);
         }
+
+        //Creates a new comment for the post
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CreateComment(int postID,[Bind("ID,Body,PostID")] PostComment postComment)
+        {
+            if (ModelState.IsValid)
+            {
+                /*
+                Need to add an author field to the PostComment model and then set it to the Author like the ID
+                postComment.Author = Author;
+                */
+                postComment.PostID = postID;//sets the PostID to the ID of the post parameter that takes the function from the view
+
+                _context.Add(postComment);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction("Details", "Posts", new {id = postID});//Make it redirect to the same post page
+            }
+            return View(postComment);
+        }
+
+
     }
 }

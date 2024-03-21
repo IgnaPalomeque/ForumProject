@@ -1,0 +1,42 @@
+﻿@model ForumProject.Models.ForumPost
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>@Html.DisplayFor(model => model.Title)</h1>
+
+<div>
+    <h4>@Html.DisplayFor(model => model.Author)</h4>
+    <h6>@Html.DisplayFor(model => model.DateCreated)</h6>
+    <hr />
+    <p>@Html.DisplayFor(model => model.Description)</p>
+    <hr />
+</div>
+<div>
+    @{
+        var newComment = new ForumProject.Models.PostComment
+            {
+                PostID = Model.ID
+            };
+    }
+    <partial name="_CommentForm" model="newComment"/>
+</div>
+<div>
+    <br />
+    <label>Comments:</label>
+    @if (Model.Comments.Any())
+    {
+        <ul>
+            @foreach (var comment in Model.Comments)
+            {
+                <li>@comment.Body</li>
+            }
+        </ul>
+    }
+
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
