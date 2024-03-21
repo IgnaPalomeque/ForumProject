@@ -3,6 +3,7 @@
 @using (Html.BeginForm("CreateComment", "Posts"))
 {
 	@Html.HiddenFor(model => model.PostID)
+	//@Html.HiddenFor(model => model.CommentAuthor)
 
 	<div class="form-group">
 		<label>Add a comment</label>

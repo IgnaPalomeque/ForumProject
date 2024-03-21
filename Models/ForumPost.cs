@@ -13,7 +13,7 @@ namespace ForumProject.Models
         [Required]
         public string? Author { get; set; }
         [Required]
-        public DateTime DateCreated { get; set; } = DateTime.Now;
+        public String DateCreated { get; set; }
         public ICollection<PostComment>? Comments { get; set; }
     }
 }

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ForumProject.Data;
 using ForumProject.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ForumProject.Controllers
 {
@@ -44,10 +45,17 @@ namespace ForumProject.Controllers
             return View(forumPost);
         }
 
-        // GET: Posts/Create
-        public IActionResult Create()
+		// GET: Posts/Create
+		[Authorize]
+		public IActionResult Create()
         {
-            return View();
+            //Takes the User name account to set to the author of the post
+            string author = User.Identity.Name;
+            ViewData["Author"] = author;
+
+			ViewData["DateCreated"] = DateTime.Now.ToString("yyyy-MM-dd HH:mm");
+
+			return View();
         }
 
         // POST: Posts/Create
@@ -55,10 +63,12 @@ namespace ForumProject.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Title,Description,Author,DateCreated")] ForumPost forumPost)
+		[Authorize]
+		public async Task<IActionResult> Create(string author,[Bind("ID,Title,Description,Author,DateCreated")] ForumPost forumPost)
         {
             if (ModelState.IsValid)
             {
+                forumPost.Author = author;
                 _context.Add(forumPost);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -66,8 +76,9 @@ namespace ForumProject.Controllers
             return View(forumPost);
         }
 
-        // GET: Posts/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+		// GET: Posts/Edit/5
+		[Authorize]
+		public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
             {
@@ -87,7 +98,8 @@ namespace ForumProject.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Title,Description,Author,DateCreated")] ForumPost forumPost)
+		[Authorize]
+		public async Task<IActionResult> Edit(int id, [Bind("ID,Title,Description,Author,DateCreated")] ForumPost forumPost)
         {
             if (id != forumPost.ID)
             {
@@ -117,8 +129,9 @@ namespace ForumProject.Controllers
             return View(forumPost);
         }
 
-        // GET: Posts/Delete/5
-        public async Task<IActionResult> Delete(int? id)
+		// GET: Posts/Delete/5
+		[Authorize]
+		public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
             {
@@ -138,7 +151,8 @@ namespace ForumProject.Controllers
         // POST: Posts/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+		[Authorize]
+		public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var forumPost = await _context.ForumPost.FindAsync(id);
             if (forumPost != null)
@@ -158,14 +172,16 @@ namespace ForumProject.Controllers
         //Creates a new comment for the post
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public async Task<IActionResult> CreateComment(int postID,[Bind("ID,Body,PostID")] PostComment postComment)
         {
             if (ModelState.IsValid)
             {
                 /*
                 Need to add an author field to the PostComment model and then set it to the Author like the ID
-                postComment.Author = Author;
-                */
+                postComment.CommentAuthor = author;*/
+                postComment.CommentAuthor = User.Identity.Name;
+                
                 postComment.PostID = postID;//sets the PostID to the ID of the post parameter that takes the function from the view
 
                 _context.Add(postComment);
@@ -175,7 +191,5 @@ namespace ForumProject.Controllers
             }
             return View(postComment);
         }
-
-
     }
 }

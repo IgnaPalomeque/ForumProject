@@ -260,3 +260,4 @@ C:\Users\nacho\Desktop\Csharp\ForumProject\bin\Debug\net8.0\runtimes\win\lib\net
 C:\Users\nacho\Desktop\Csharp\ForumProject\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\Users\nacho\Desktop\Csharp\ForumProject\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\nacho\Desktop\Csharp\ForumProject\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
+C:\Users\nacho\Desktop\Csharp\ForumProject\obj\Debug\net8.0\ForumProject.sourcelink.json

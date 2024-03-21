@@ -17,7 +17,8 @@
     @{
         var newComment = new ForumProject.Models.PostComment
             {
-                PostID = Model.ID
+                PostID = Model.ID,
+                //CommentAuthor = User.Identity.Name
             };
     }
     <partial name="_CommentForm" model="newComment"/>
@@ -30,7 +31,8 @@
         <ul>
             @foreach (var comment in Model.Comments)
             {
-                <li>@comment.Body</li>
+                <p>@comment.CommentAuthor:</p>
+                <p>@comment.Body</p>
             }
         </ul>
     }

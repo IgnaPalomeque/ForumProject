@@ -7,6 +7,7 @@ namespace ForumProject.Models
     {
         [Key]
         public int ID { get; set; }
+        public string? CommentAuthor{ get; set; }
         [Required]
         public string? Body { get; set; }
         [Required]
