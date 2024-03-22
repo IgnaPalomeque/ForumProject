@@ -3,32 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\nacho\\Desktop\\Csharp\\ForumProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A401A20A-A2A5-4016-9B20-CF555C28FFFE}|ForumProject.csproj|c:\\users\\nacho\\desktop\\csharp\\forumproject\\views\\posts\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A401A20A-A2A5-4016-9B20-CF555C28FFFE}|ForumProject.csproj|solutionrelative:views\\posts\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A401A20A-A2A5-4016-9B20-CF555C28FFFE}|ForumProject.csproj|c:\\users\\nacho\\desktop\\csharp\\forumproject\\views\\posts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A401A20A-A2A5-4016-9B20-CF555C28FFFE}|ForumProject.csproj|solutionrelative:views\\posts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A401A20A-A2A5-4016-9B20-CF555C28FFFE}|ForumProject.csproj|c:\\users\\nacho\\desktop\\csharp\\forumproject\\controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A401A20A-A2A5-4016-9B20-CF555C28FFFE}|ForumProject.csproj|solutionrelative:controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A401A20A-A2A5-4016-9B20-CF555C28FFFE}|ForumProject.csproj|c:\\users\\nacho\\desktop\\csharp\\forumproject\\views\\posts\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A401A20A-A2A5-4016-9B20-CF555C28FFFE}|ForumProject.csproj|solutionrelative:views\\posts\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A401A20A-A2A5-4016-9B20-CF555C28FFFE}|ForumProject.csproj|c:\\users\\nacho\\desktop\\csharp\\forumproject\\controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A401A20A-A2A5-4016-9B20-CF555C28FFFE}|ForumProject.csproj|solutionrelative:controllers\\postscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A401A20A-A2A5-4016-9B20-CF555C28FFFE}|ForumProject.csproj|c:\\users\\nacho\\desktop\\csharp\\forumproject\\models\\postcomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A401A20A-A2A5-4016-9B20-CF555C28FFFE}|ForumProject.csproj|solutionrelative:models\\postcomment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A401A20A-A2A5-4016-9B20-CF555C28FFFE}|ForumProject.csproj|c:\\users\\nacho\\desktop\\csharp\\forumproject\\views\\shared\\_commentform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A401A20A-A2A5-4016-9B20-CF555C28FFFE}|ForumProject.csproj|solutionrelative:views\\shared\\_commentform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A401A20A-A2A5-4016-9B20-CF555C28FFFE}|ForumProject.csproj|c:\\users\\nacho\\desktop\\csharp\\forumproject\\views\\posts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A401A20A-A2A5-4016-9B20-CF555C28FFFE}|ForumProject.csproj|solutionrelative:views\\posts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A401A20A-A2A5-4016-9B20-CF555C28FFFE}|ForumProject.csproj|c:\\users\\nacho\\desktop\\csharp\\forumproject\\models\\forumpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A401A20A-A2A5-4016-9B20-CF555C28FFFE}|ForumProject.csproj|solutionrelative:models\\forumpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A401A20A-A2A5-4016-9B20-CF555C28FFFE}|ForumProject.csproj|c:\\users\\nacho\\desktop\\csharp\\forumproject\\views\\posts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A401A20A-A2A5-4016-9B20-CF555C28FFFE}|ForumProject.csproj|solutionrelative:views\\posts\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,19 +34,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CommentsController.cs",
-              "DocumentMoniker": "C:\\Users\\nacho\\Desktop\\Csharp\\ForumProject\\Controllers\\CommentsController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CommentsController.cs",
-              "ToolTip": "C:\\Users\\nacho\\Desktop\\Csharp\\ForumProject\\Controllers\\CommentsController.cs",
-              "RelativeToolTip": "Controllers\\CommentsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T23:37:22.919Z",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\nacho\\Desktop\\Csharp\\ForumProject\\Views\\Posts\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Posts\\Index.cshtml",
+              "ToolTip": "C:\\Users\\nacho\\Desktop\\Csharp\\ForumProject\\Views\\Posts\\Index.cshtml",
+              "RelativeToolTip": "Views\\Posts\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-22T22:48:16.114Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
@@ -61,7 +58,7 @@
               "RelativeDocumentMoniker": "Views\\Posts\\Create.cshtml",
               "ToolTip": "C:\\Users\\nacho\\Desktop\\Csharp\\ForumProject\\Views\\Posts\\Create.cshtml",
               "RelativeToolTip": "Views\\Posts\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAABlAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABsAAABFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-03-21T22:52:26.474Z",
               "EditorCaption": ""
@@ -74,7 +71,7 @@
               "RelativeDocumentMoniker": "Controllers\\PostsController.cs",
               "ToolTip": "C:\\Users\\nacho\\Desktop\\Csharp\\ForumProject\\Controllers\\PostsController.cs",
               "RelativeToolTip": "Controllers\\PostsController.cs",
-              "ViewState": "AQIAAKEAAAAAAAAAAAAAALYAAAA/AAAA",
+              "ViewState": "AQIAAGgAAAAAAAAAAAAAAHUAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-21T00:01:20.551Z",
               "EditorCaption": ""
@@ -82,51 +79,38 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "PostComment.cs",
-              "DocumentMoniker": "C:\\Users\\nacho\\Desktop\\Csharp\\ForumProject\\Models\\PostComment.cs",
-              "RelativeDocumentMoniker": "Models\\PostComment.cs",
-              "ToolTip": "C:\\Users\\nacho\\Desktop\\Csharp\\ForumProject\\Models\\PostComment.cs",
-              "RelativeToolTip": "Models\\PostComment.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T23:18:42.648Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "_CommentForm.cshtml",
               "DocumentMoniker": "C:\\Users\\nacho\\Desktop\\Csharp\\ForumProject\\Views\\Shared\\_CommentForm.cshtml",
               "RelativeDocumentMoniker": "Views\\Shared\\_CommentForm.cshtml",
               "ToolTip": "C:\\Users\\nacho\\Desktop\\Csharp\\ForumProject\\Views\\Shared\\_CommentForm.cshtml",
               "RelativeToolTip": "Views\\Shared\\_CommentForm.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAZAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-03-21T17:40:38.038Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Details.cshtml",
               "DocumentMoniker": "C:\\Users\\nacho\\Desktop\\Csharp\\ForumProject\\Views\\Posts\\Details.cshtml",
               "RelativeDocumentMoniker": "Views\\Posts\\Details.cshtml",
               "ToolTip": "C:\\Users\\nacho\\Desktop\\Csharp\\ForumProject\\Views\\Posts\\Details.cshtml",
               "RelativeToolTip": "Views\\Posts\\Details.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAB0AAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-03-21T17:07:22.507Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "ForumPost.cs",
               "DocumentMoniker": "C:\\Users\\nacho\\Desktop\\Csharp\\ForumProject\\Models\\ForumPost.cs",
               "RelativeDocumentMoniker": "Models\\ForumPost.cs",
               "ToolTip": "C:\\Users\\nacho\\Desktop\\Csharp\\ForumProject\\Models\\ForumPost.cs",
               "RelativeToolTip": "Models\\ForumPost.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAWwA8AAAAWAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAWwA0AAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-21T23:04:36.26Z",
               "EditorCaption": ""

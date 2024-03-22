@@ -3,7 +3,6 @@
 @{
     ViewData["Title"] = "Details";
 }
-
 <h1>@Html.DisplayFor(model => model.Title)</h1>
 
 <div>
@@ -21,11 +20,11 @@
                 //CommentAuthor = User.Identity.Name
             };
     }
-    <partial name="_CommentForm" model="newComment"/>
+    @Html.Partial("_CommentForm", newComment)
 </div>
 <div>
     <br />
-    <label>Comments:</label>
+    <h5>Comments:</h5>
     @if (Model.Comments.Any())
     {
         <ul>
@@ -36,9 +35,18 @@
             }
         </ul>
     }
-
+    else
+    {
+        <p>This post does not have comments yet. Be the first to comment!</p>    
+    }
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.ID">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <form method="post">
+        <button asp-action="Index">Back to List</button>
+        @if (User.Identity.Name == Model.Author)
+        {
+            <button asp-action="Edit" asp-route-id="@Model?.ID" type="submit">Edit</button>
+            <button asp-action="Delete" asp-route-id="@Model?.ID" type="submit">Delete</button>
+        }
+    </form>
 </div>

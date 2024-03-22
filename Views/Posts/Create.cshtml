@@ -24,12 +24,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="Author" class="control-label"></label>
-                <input asp-for="Author" class="form-control" value="@ViewData["Author"]" />
+                <input asp-for="Author" class="form-control" value="@ViewData["Author"]" readonly/>
                 <span asp-validation-for="Author" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="DateCreated" class="control-label"></label>
-                <input asp-for="DateCreated" class="form-control" value="@ViewData["DateCreated"]" />
+                <input asp-for="DateCreated" class="form-control" value="@ViewData["DateCreated"]" readonly/>
                 <span asp-validation-for="DateCreated" class="text-danger"></span>
             </div>
             <div class="form-group">

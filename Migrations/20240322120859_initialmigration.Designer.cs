@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ForumProject.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240321233436_modified Comment model again")]
-    partial class modifiedCommentmodelagain
+    [Migration("20240322120859_initialmigration")]
+    partial class initialmigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -64,6 +64,9 @@ namespace ForumProject.Migrations
 
                     b.Property<string>("Body")
                         .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CommentAuthor")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("PostID")
