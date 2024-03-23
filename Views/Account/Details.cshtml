@@ -1,0 +1,20 @@
+﻿@model IEnumerable<ForumProject.Models.ForumPost>
+
+@{
+    ViewData["Title"] = "Details";
+    var user = User.Identity.Name;
+}
+
+<h1>@user</h1>
+<div>
+    <h5>User Posts: </h5>
+    @{
+        foreach (var item in Model)
+        {
+            <h1><a asp-controller="Posts" asp-action="Details" asp-route-id="@item.ID">@Html.DisplayFor(modelItem => item.Title)</a></h1>
+            <p>By @Html.DisplayFor(modelItem => item.Author) Created @Html.DisplayFor(ModelItem => item.DateCreated)</p>
+            <p>@Html.DisplayFor(modelItem => item.Description)</p>
+        }
+    }
+</div>
+
